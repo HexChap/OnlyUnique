@@ -1,1 +1,2 @@
-watchdog
+watchdog~=3.0.0
+pysftp~=0.2.9
