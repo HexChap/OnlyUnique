@@ -2,16 +2,17 @@ import json
 
 import pysftp
 
+from core import conf
+
 
 def create_conn() -> pysftp.Connection:
-    with open("sftp_conf.json", "r") as f:
-        data = json.loads(f.read())
+    cred = conf["sftp"]
 
     return pysftp.Connection(
-        host=data["host"],
-        username=data["username"],
-        password=data["password"],
-        port=data["port"],
+        host=cred["host"],
+        username=cred["username"],
+        password=cred["password"],
+        port=cred["port"],
     )
 
 

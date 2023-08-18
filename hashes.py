@@ -14,7 +14,7 @@ class Hashes:
         with open(self.hashes_path, "r") as f:
             data = json.loads(f.read())
 
-        data[name.strip("decryptedPartly_")] = hash_
+        data[name] = hash_
 
         with open(self.hashes_path, "w") as f:
             f.write(json.dumps(data))

@@ -1,0 +1,9 @@
+{
+  "sftp": {
+    "host": "",
+    "username": "",
+    "password": "",
+    "port": 22
+  },
+  "check_unique_dir": "uniqueDecrypts"
+}
